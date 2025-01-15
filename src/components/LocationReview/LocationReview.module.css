@@ -1,0 +1,29 @@
+
+.locationReviewWrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+}
+
+.ratingText {
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    text-decoration-line: underline;
+}
+
+.rating {
+    fill: var(--color-lighter);
+}
+
+.rated {
+    fill: var(--color-accent-light);
+}
+
+.locationText {
+    text-decoration-line: none;
+}

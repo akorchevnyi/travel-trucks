@@ -1,0 +1,35 @@
+.hero {
+    height: calc(100vh - 72px);
+    background-image: url('../../assets/hero.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    align-items: center;
+}
+
+.wrapper {
+    text-align: start;
+    width: 100%;
+}
+
+.header,
+.motto {
+    color: var(--color-lightest);
+    text-align: left;
+}
+
+.header {
+    margin-bottom: 16px;
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 32px;
+}
+
+.motto {
+    margin-bottom: 40px;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 1.5;
+}

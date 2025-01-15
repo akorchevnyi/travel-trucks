@@ -1,0 +1,32 @@
+.btn {
+    display: inline-block;
+    padding: 16px 56px;
+    border-radius: var(--border-radius-hard);
+
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    cursor: pointer;
+
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.accentBtn {
+    background-color: var(--color-accent);
+    color: var(--color-white);
+    border: none;
+}
+
+.accentBtn:hover {
+    background-color: var(--color-accent-strong);
+}
+
+.commonBtn {
+    border: 1px solid var(--color-light);
+    color: var(--color-darkest);
+    background-color: var(--color-white);
+}
+
+.commonBtn:hover {
+    border: 1px solid var(--color-accent-strong);
+}

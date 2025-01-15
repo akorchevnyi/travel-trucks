@@ -1,0 +1,38 @@
+.navRow {
+    background-color: var(--color-lighter);
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    padding: 24px 0;
+}
+
+.navLogo {
+    position: absolute;
+    left: 64px;
+    top: 24px;
+    object-fit: contain;
+}
+
+.menuWrapper {
+    flex: 1;
+    gap: 32px;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 32px
+}
+
+.navLink {
+    font-weight: 500;
+    color: inherit;
+}
+
+.active {
+    color: var(--color-accent-strong);
+}
