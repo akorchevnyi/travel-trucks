@@ -1,7 +1,7 @@
 import { useState } from "react";
 import useCampers from "../../hooks/useCampers.js";
-import CustomBtn from "../ui/CustomBtn/CustomBtn.jsx";
-import { Loader } from "../ui/Loader/Loader.jsx";
+import CustomBtn from "../common/ui/CustomBtn/CustomBtn.jsx";
+import { Loader } from "../common/ui/Loader/Loader.jsx";
 import CamperCard from "../CamperCard/CamperCard.jsx";
 import css from "./CampersList.module.css";
 

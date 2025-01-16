@@ -29,10 +29,12 @@
     display: flex;
     flex-direction: column;
     gap: 24px;
+    overflow: hidden;
 }
 
 .mainInfo {
     width: 100%;
+
     display: flex;
     flex-direction: column;
     gap: 8px;
@@ -44,9 +46,6 @@
     flex-direction: row;
     justify-content: space-between;
 
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 1.5;
     color: var(--color-dark);
 }
 
@@ -66,4 +65,11 @@
 
 .favorite {
     fill: var(--color-accent);
+}
+
+.description {
+    color: var(--color-darker);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }

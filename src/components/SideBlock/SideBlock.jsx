@@ -1,7 +1,7 @@
 import css from "./SideBlock.module.css";
 import LocationOption from "../LocationOption/LocationOption.jsx";
 import Filters from "../Filters/Filters.jsx";
-import CustomBtn from "../ui/CustomBtn/CustomBtn.jsx";
+import CustomBtn from "../common/ui/CustomBtn/CustomBtn.jsx";
 
 export default function SideBlock() {
     const handleSearch = () => {

@@ -2,7 +2,7 @@ import css from "./Filters.module.css";
 import { useDispatch, useSelector } from "react-redux";
 import { changeEquipment, changeFavorite, changeType, selectEquipment, selectFavorite, selectType } from "../../redux/filtersSlice.js";
 import clsx from "clsx";
-import Icon from "../ui/Icon/Icon.jsx";
+import Icon from "../common/ui/Icon/Icon.jsx";
 
 const checkBoxData = ["ac", "automatic", "kitchen", "tv", "bathroom"];
 const radioData = ["van", "fully", "alcove"];

@@ -1,6 +1,6 @@
 import "./App.css";
 import { Route, Routes } from "react-router";
-import HomePage from "../pages/HomaPage/HomePage.jsx";
+import HomePage from "../pages/HomePage/HomePage.jsx";
 import { lazy } from "react";
 import CampersPage from "../pages/CampersPage/CampersPage.jsx";
 

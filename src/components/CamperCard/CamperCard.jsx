@@ -1,13 +1,17 @@
 import css from "./CamperCard.module.css";
 import clsx from "clsx";
 import { useState } from "react";
-import Icon from "../ui/Icon/Icon.jsx";
-import LocationReview from "../LocationReview/LocationReview.jsx";
+import Icon from "../common/ui/Icon/Icon.jsx";
+import LocationReview from "../common/LocationReview/LocationReview.jsx";
+import Categories from "../common/Categories/Categories.jsx";
+import CustomBtn from "../common/ui/CustomBtn/CustomBtn.jsx";
+import { useNavigate } from "react-router";
 
 export default function CamperCard({ camper }) {
-    const { price, name, gallery, id, reviews, rating, location } = camper;
+    const navigate = useNavigate();
+    const { price, name, gallery, id, reviews, rating, location, description } = camper;
     const [favorite, setFavorite] = useState(JSON.parse((localStorage.getItem("favorites")) || []).includes(id));
-    console.log("==== camper ==> ", camper);
+    // console.log("==== camper ==> ", camper);
 
     const handleFavoriteClick = () => {
         const favorites = JSON.parse(localStorage.getItem("favorites")) || [];
@@ -16,6 +20,10 @@ export default function CamperCard({ camper }) {
         setFavorite(!favorite);
     };
 
+    const handleShowMore = () => {
+        navigate(`/campers/${id}`, { state: "/campers" })
+    }
+
     return (
         <div className={css.wrapper}>
             <div className={css.imageWrapper}>
@@ -23,6 +31,7 @@ export default function CamperCard({ camper }) {
             </div>
 
             <div className={css.info}>
+
                 <div className={css.mainInfo}>
                     <div className={css.headingBlock}>
                         <h2 className={css.heading}>{name}</h2>
@@ -33,9 +42,13 @@ export default function CamperCard({ camper }) {
                         </h2>
                     </div>
                     <LocationReview reviews={reviews?.length || 0} rating={rating} location={location}/>
-
                 </div>
 
+                <p className={css.description}>{description}</p>
+
+                <Categories camper={camper}/>
+
+                <CustomBtn title="Show more" type="accent" onClick={handleShowMore} />
             </div>
         </div>
     );

@@ -1,6 +1,6 @@
 import css from "./HomePage.module.css";
 import clsx from "clsx";
-import CustomBtn from "../../components/ui/CustomBtn/CustomBtn.jsx";
+import CustomBtn from "../../components/common/ui/CustomBtn/CustomBtn.jsx";
 import { useNavigate } from "react-router";
 
 export default function HomePage() {
