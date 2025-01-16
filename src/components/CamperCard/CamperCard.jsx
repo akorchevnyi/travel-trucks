@@ -10,8 +10,8 @@ import { useNavigate } from "react-router";
 export default function CamperCard({ camper }) {
     const navigate = useNavigate();
     const { price, name, gallery, id, reviews, rating, location, description } = camper;
-    const [favorite, setFavorite] = useState(JSON.parse((localStorage.getItem("favorites")) || []).includes(id));
-    // console.log("==== camper ==> ", camper);
+    const [favorite, setFavorite] = useState(JSON.parse((localStorage.getItem("favorites")) || "[]").includes(id));
+
 
     const handleFavoriteClick = () => {
         const favorites = JSON.parse(localStorage.getItem("favorites")) || [];

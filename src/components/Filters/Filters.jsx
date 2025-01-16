@@ -4,8 +4,8 @@ import { changeEquipment, changeFavorite, changeType, selectEquipment, selectFav
 import clsx from "clsx";
 import Icon from "../common/ui/Icon/Icon.jsx";
 
-const checkBoxData = ["ac", "automatic", "kitchen", "tv", "bathroom"];
-const radioData = ["van", "fully", "alcove"];
+const checkBoxData = ["AC", "automatic", "kitchen", "TV", "bathroom"];
+const radioData = ["panelTruck", "fullyIntegrated", "alcove"];
 
 export default function Filters() {
     const dispatch = useDispatch();

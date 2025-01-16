@@ -4,13 +4,13 @@ const initialState = {
     location : "",
     type     : "",
     equipment: {
-        ac       : false,
+        AC       : false,
         automatic: false,
         kitchen  : false,
-        tv       : false,
+        TV       : false,
         bathroom : false
     },
-    favorite : false
+    favorite : false,
 };
 
 const slice = createSlice({

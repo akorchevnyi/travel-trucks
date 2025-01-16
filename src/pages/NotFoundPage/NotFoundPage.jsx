@@ -3,7 +3,6 @@ import { Link, useLocation } from "react-router-dom";
 
 export default function NotFoundPage() {
     const location = useLocation();
-    console.log("==== location ==> ", location);
     const backUrl = location.state ?? "/";
 
     return <div className="container">
