@@ -1,9 +1,7 @@
 import css from "./Navigation.module.css";
 import { Link, NavLink } from "react-router-dom";
 import clsx from "clsx";
-
-const logo = new URL("../../assets/logo.svg", import.meta.url).href;
-
+import Logo from "../../assets/logo.svg";
 
 export default function Navigation() {
     const navClass = ({ isActive }) => clsx(css.navLink, isActive && css.active);
@@ -12,7 +10,7 @@ export default function Navigation() {
         <div className={css.navRow}>
             <div className={clsx(css.container, "container")}>
                 <Link to="/" className={css.navLogo}>
-                    <img className={css.navLink} src={logo} width={135} alt="company logo"/>
+                    <img className={css.navLink} src={Logo} width={135} alt="company logo"/>
                 </Link>
                 <div className={css.menuWrapper}>
                     <div className={css.menu}>

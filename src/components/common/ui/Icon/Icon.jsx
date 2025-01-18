@@ -8,7 +8,7 @@ export default function Icon({ onClick = null, width, height, styles, type }) {
 
     return (
         <svg onClick={onClick} className={iconStyle} width={width} height={height}>
-            <use href={`/src/assets/sprite.svg#icon-${type}`}></use>
+            <use xlinkHref="/assets/sprite.abcd1234.svg#icon-id"></use>
         </svg>
     );
 }

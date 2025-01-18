@@ -1,4 +1,3 @@
-import "./App.css";
 import { Route, Routes } from "react-router";
 import { lazy, Suspense } from "react";
 import useCampers from "../hooks/useCampers.jsx";
