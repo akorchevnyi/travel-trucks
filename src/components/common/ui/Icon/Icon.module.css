@@ -1,0 +1,7 @@
+.unrated {
+    fill: var(--color-lighter);
+}
+
+.rated {
+    fill: var(--color-accent-light);
+}

@@ -1,11 +1,11 @@
 import { useSelector } from "react-redux";
-import { selectError, selectFilteredCampers, selectLoading, selectTotal } from "../redux/campersSlice.js";
+import { selectError, selectFilteredCampers, selectLoading } from "../redux/campersSlice.js";
 
 export default function useCampers() {
-    const total = useSelector(selectTotal);
     const loading = useSelector(selectLoading);
     const error = useSelector(selectError);
     const campers = useSelector(selectFilteredCampers);
+    const total = campers?.length || 0;
 
-    return { total, loading, error, campers };
+    return { loading, error, campers, total };
 }

@@ -1,23 +1,24 @@
 import css from "./CamperCard.module.css";
 import clsx from "clsx";
-import { useState } from "react";
-import Icon from "../common/ui/Icon/Icon.jsx";
-import LocationReview from "../common/LocationReview/LocationReview.jsx";
-import Categories from "../common/Categories/Categories.jsx";
-import CustomBtn from "../common/ui/CustomBtn/CustomBtn.jsx";
+import Icon from "../../common/ui/Icon/Icon.jsx";
+import LocationReview from "../../common/LocationReview/LocationReview.jsx";
+import Categories from "../../common/Categories/Categories.jsx";
+import CustomBtn from "../../common/ui/CustomBtn/CustomBtn.jsx";
 import { useNavigate } from "react-router";
+import { useDispatch, useSelector } from "react-redux";
+import { selectFavorites, changeFavorites } from "../../../redux/campersSlice.js";
+
 
 export default function CamperCard({ camper }) {
     const navigate = useNavigate();
+    const dispatch = useDispatch();
     const { price, name, gallery, id, reviews, rating, location, description } = camper;
-    const [favorite, setFavorite] = useState(JSON.parse((localStorage.getItem("favorites")) || "[]").includes(id));
+    const favorites = useSelector(selectFavorites);
+    const isFavorite = favorites.includes(id);
 
 
     const handleFavoriteClick = () => {
-        const favorites = JSON.parse(localStorage.getItem("favorites")) || [];
-        favorites.includes(id) ? favorites.splice(favorites.indexOf(id), 1) : favorites.push(id);
-        localStorage.setItem("favorites", JSON.stringify(favorites));
-        setFavorite(!favorite);
+       dispatch(changeFavorites(id))
     };
 
     const handleShowMore = () => {
@@ -38,7 +39,7 @@ export default function CamperCard({ camper }) {
                         <h2 className={css.heading}>
                             €{price}{price === Math.floor(price) && ".00"}
                             <Icon type="heart" width={26} height={24} onClick={handleFavoriteClick}
-                                  styles={clsx(css.heart, favorite && css.favorite)}/>
+                                  styles={clsx(css.heart, isFavorite && css.favorite)}/>
                         </h2>
                     </div>
                     <LocationReview reviews={reviews?.length || 0} rating={rating} location={location}/>
@@ -48,7 +49,7 @@ export default function CamperCard({ camper }) {
 
                 <Categories camper={camper}/>
 
-                <CustomBtn title="Show more" type="accent" onClick={handleShowMore} />
+                <CustomBtn title="Show more" variant="accent" onClick={handleShowMore} />
             </div>
         </div>
     );

@@ -1,8 +1,8 @@
 import css from "./LocationOption.module.css";
 import clsx from "clsx";
 import { useDispatch, useSelector } from "react-redux";
-import { changeLocation, selectLocation } from "../../redux/filtersSlice.js";
-import Icon from "../common/ui/Icon/Icon.jsx";
+import { changeLocation, selectLocation } from "../../../redux/filtersSlice.js";
+import Icon from "../../common/ui/Icon/Icon.jsx";
 
 export default function LocationOption() {
     const dispatch = useDispatch();

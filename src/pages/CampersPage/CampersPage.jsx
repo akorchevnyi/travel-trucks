@@ -1,5 +1,5 @@
-import SideBlock from "../../components/SideBlock/SideBlock.jsx";
-import CampersList from "../../components/CampersList/CampersList.jsx";
+import SideBlock from "../../components/campers/SideBlock/SideBlock.jsx";
+import CampersList from "../../components/campers/CampersList/CampersList.jsx";
 import clsx from "clsx";
 import css from "./CampersPage.module.css";
 import { useDispatch } from "react-redux";

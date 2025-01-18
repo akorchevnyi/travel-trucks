@@ -54,7 +54,7 @@ p {
 .container {
     max-width: 1440px;
     margin: 0 auto;
-    padding: 0 64px;
+    padding: 0 64px 80px 64px;
 }
 
 .input {

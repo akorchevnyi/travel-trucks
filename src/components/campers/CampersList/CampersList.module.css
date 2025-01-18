@@ -15,3 +15,10 @@
 
     width: 100%;
 }
+
+.text {
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--color-darker);
+}

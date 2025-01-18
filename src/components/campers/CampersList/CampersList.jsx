@@ -1,7 +1,7 @@
-import { useState } from "react";
-import useCampers from "../../hooks/useCampers.js";
-import CustomBtn from "../common/ui/CustomBtn/CustomBtn.jsx";
-import { Loader } from "../common/ui/Loader/Loader.jsx";
+import { useEffect, useState } from "react";
+import useCampers from "../../../hooks/useCampers.jsx";
+import CustomBtn from "../../common/ui/CustomBtn/CustomBtn.jsx";
+import { Loader } from "../../common/ui/Loader/Loader.jsx";
 import CamperCard from "../CamperCard/CamperCard.jsx";
 import css from "./CampersList.module.css";
 
@@ -10,11 +10,18 @@ export default function CampersList() {
     const { campers, loading, error, total } = useCampers();
     const campersToRender = campers.slice(0, cardsToShow);
 
-    if (loading) return <Loader />;
+    useEffect(() => {
+        setCardsToShow(4);
+    }, [campers]);
+
+    if (loading) return <Loader/>;
     if (error) return <p>Error while loading campers. Please try again later.</p>;
+    if (campers.length === 0) return <p className={css.text}>No campers with these parameters</p>;
+
+    const isMore = cardsToShow + 4 < total;
 
     const handleLoadMoreClock = () => {
-        if (cardsToShow + 4 >= total) {
+        if (!isMore) {
             setCardsToShow(total);
             return;
         }
@@ -32,7 +39,8 @@ export default function CampersList() {
                     </li>
                 )}
             </ul>
-            <CustomBtn title="Load more" type="common" onClick={handleLoadMoreClock}/>
+
+            {isMore && <CustomBtn title="Load more" variant="common" onClick={handleLoadMoreClock}/>}
         </div>
     );
 }

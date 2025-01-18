@@ -15,7 +15,7 @@ export default function HomePage() {
             <div className={textWrapper}>
                 <h1 className={css.header}>Campers of your dreams</h1>
                 <h2 className={css.motto}>You can find everything you want in our catalog</h2>
-                <CustomBtn title="View now" type="accent" onClick={handleBtnClick}>Button</CustomBtn>
+                <CustomBtn title="View now" variant="accent" onClick={handleBtnClick}>Button</CustomBtn>
             </div>
         </div>
     );

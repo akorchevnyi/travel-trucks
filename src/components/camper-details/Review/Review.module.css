@@ -1,0 +1,48 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 630px;
+}
+
+.head {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    align-items: center;
+}
+
+.avatar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: var(--color-lighter);
+
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 1.33px;
+    color: var(--color-accent);
+}
+
+.nameRatingWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.name {
+    font-weight: 500;
+}
+
+.ratingWrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
+}
+
+.comment {
+    color: var(--color-darker);
+}

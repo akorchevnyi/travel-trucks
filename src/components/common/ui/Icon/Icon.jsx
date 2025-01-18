@@ -1,7 +1,13 @@
+import css from "./Icon.module.css";
 
-export default function Icon({ onClick=null, width, height, styles, type }) {
+export default function Icon({ onClick = null, width, height, styles, type }) {
+    let iconStyle = styles;
+    if (type === "rating") {
+        iconStyle = styles === "rated" ? css.rated : css.unrated;
+    }
+
     return (
-        <svg onClick={onClick} className={styles} width={width} height={height}>
+        <svg onClick={onClick} className={iconStyle} width={width} height={height}>
             <use xlinkHref={`/src/assets/sprite.svg#icon-${type}`}></use>
         </svg>
     );
