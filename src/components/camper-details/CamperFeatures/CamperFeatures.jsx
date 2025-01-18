@@ -3,6 +3,7 @@ import Categories from "../../common/Categories/Categories.jsx";
 import useCamper from "../../../hooks/useCamper.jsx";
 import { Loader } from "../../common/ui/Loader/Loader.jsx";
 import ErrorMessage from "../../common/Error/ErrorMessage.jsx";
+import { capitalize } from "../../../util/capitalize.js";
 
 
 export default function CamperFeatures() {
@@ -54,9 +55,6 @@ export default function CamperFeatures() {
 };
 
 
-function capitalize(word) {
-    return word.charAt(0).toUpperCase() + word.slice(1);
-}
 
 function addSpace(word) {
     return word.replace(/(\d)([a-zA-Z])/g, "$1 $2");
