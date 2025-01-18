@@ -1,8 +1,9 @@
 import css from "./Navigation.module.css";
 import { Link, NavLink } from "react-router-dom";
 import clsx from "clsx";
-
-const logo = new URL("../../assets/logo.svg", import.meta.url).href;
+import logo from "/Logo.svg";
+//
+// const logo = new URL("../../assets/logo.svg", import.meta.url).href;
 
 
 export default function Navigation() {
