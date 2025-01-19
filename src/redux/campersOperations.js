@@ -8,7 +8,6 @@ export const fetchCampers = createAsyncThunk(
     async (params, { rejectWithValue }) => {
         try {
             const response = await axios.get("/campers", { params });
-            console.log("==== response.data ==> ", response.data);
             return response.data;
         } catch (error) {
             if (error.status === 404) {
