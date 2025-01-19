@@ -86,7 +86,6 @@ export default function CamperDetailsPage() {
                         <BookingForm/>
                     </div>
 
-
                     {selectedImage && (
                         <ImageModal image={selectedImage} onClose={closeModal}/>
                     )}

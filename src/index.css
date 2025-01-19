@@ -74,3 +74,91 @@ p {
 .input:focus {
     color: var(--color-darkest);
 }
+
+
+/*custom data-picker*/
+.react-datepicker {
+    width: 276px !important;
+    height: 274px !important;
+    border: 1px solid var(--color-darkest) !important;
+    border-radius: var(--border-radius-light) !important;
+    box-sizing: border-box !important;
+    color: var(--color-darkest) !important;
+    overflow: hidden !important;
+}
+
+.react-datepicker__header {
+    width: 276px !important;
+    padding: 12px !important;
+    background-color: white !important;
+}
+
+.react-datepicker__month {
+    margin: 0 !important;
+    width: 100% !important;
+    padding: 12px !important;
+
+}
+
+.react-datepicker__day-names {
+    display: flex !important;
+    justify-content: space-between !important;
+    width: 100% !important;
+}
+
+.react-datepicker__day-name  {
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1.2;
+    text-transform: uppercase;
+    color: var(--color-darkest) !important;
+}
+
+.react-datepicker__day--selected {
+    border-radius: 50px !important;
+    background-color: var(--color-darker) !important;
+    color: #fff !important;
+    width: 30px !important;
+    height: 25px !important;
+}
+
+.react-datepicker__week  {
+    display: flex !important;
+    justify-content: space-between !important;
+    width: 100% !important;
+    margin-bottom: 4px !important;
+}
+
+.react-datepicker__day:hover  {
+    border-radius: 50% !important;
+    background-color: var(--color-darker) !important;
+    opacity: 0.7;
+    width: 28px !important;
+    height: 25px !important;
+    color: #fff !important;
+}
+
+
+.react-datepicker__current-month  {
+    margin-bottom: 14px !important;
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    line-height: 1.2;
+    color: var(--color-darkest) !important;
+}
+
+.react-datepicker__navigation  {
+    top: 5px !important;
+}
+
+.react-datepicker__navigation--previous  {
+    left: 12px !important;
+}
+
+.react-datepicker__navigation--next  {
+    right: 12px !important;
+}
+
+.addCustomClass {
+    color:  #ccc;
+}
